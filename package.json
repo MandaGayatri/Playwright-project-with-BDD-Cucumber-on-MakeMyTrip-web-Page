@@ -1,0 +1,25 @@
+{
+  "name": "bdd-cucumber-playwright",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cross-env HEADED=true cucumber-js",
+    "test:smoke": "cucumber-js --tags '@smoke'",
+    "test:tag": "cucumber-js --tags",
+    "posttest": "node generate-report.js",
+    "report": "node generate-report.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^10.1.0",
+    "multiple-cucumber-html-reporter": "^4.1.0",
+    "playwright": "^1.61.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
